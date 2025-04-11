@@ -1,8 +1,8 @@
 "use client"
 
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import Link from 'next/link'
-const shorten = () => {
+const Shorten = () => {
     const [Url, setUrl] = useState("")
     const [ShortUrl, setShortUrl] = useState("")
     const [Generate, setGenerate]=useState("")
@@ -75,4 +75,4 @@ const shorten = () => {
     )
 }
 
-export default shorten
+export default Shorten

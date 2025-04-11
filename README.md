@@ -2,7 +2,11 @@
 
 # Installation
 
-First, run the development server:
+First, clone this git repo:
+```bash
+git clone {url}
+```
+Then install dependencies
 
 ```bash
 npm i

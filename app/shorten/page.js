@@ -39,7 +39,7 @@ const Shorten = () => {
     }
 
     return (
-        <div className='flex justify-center items-center w-full h-[calc(100vh-10rem)]'>
+        <div className="bg-[url('/background.svg')] flex justify-center items-center w-full h-[calc(100vh-10rem)]  bg-repeat bg-contain  ">
             <div className='max-w-[635px]flex flex-col justify-center items-center  bg-gray-900 p-10 rounded-4xl gap-10'>
                 <h1 className='font-extrabold text-4xl text-yellow-400 mb-2 max-[575px]:text-3xl text-center'>Shorten your URLs</h1>
                 <div className='flex gap-3 flex-col w-full justify-center items-center '>

@@ -10,8 +10,7 @@ const Shorten = () => {
     const handleClick = async ()=>{
         console.log(Url, ShortUrl);
         let headersList = {
-            "Accept": "*/*",
-            "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+
             "Content-Type": "application/json"
            }
            

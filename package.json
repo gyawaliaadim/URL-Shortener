@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "type": "module",
   "dependencies": {
     "mongodb": "^6.15.0",
     "next": "15.3.0",
@@ -20,5 +21,22 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.0",
     "tailwindcss": "^4"
-  }
+  },
+  "description": "![URL 1](https://github.com/user-attachments/assets/be2ae282-6cb6-439c-b2bf-300ea951608d)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gyawaliaadim/URL-Shortener.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gyawaliaadim/URL-Shortener/issues"
+  },
+  "homepage": "https://github.com/gyawaliaadim/URL-Shortener#readme"
 }

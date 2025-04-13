@@ -58,7 +58,7 @@ const Shorten = () => {
 
                     <button 
                     onClick={handleClick}
-                    className='bg-yellow-400 w-[50%] h-10 rounded-full text-black font-bold cursor-pointer hover:bg-yellow-600'>Generate</button>
+                    className='bg-yellow-400 w-[50%] h-10 rounded-full text-black  font-bold cursor-pointer hover:bg-yellow-600'>Generate</button>
                     {
                         Generate.success ? 
 

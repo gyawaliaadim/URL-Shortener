@@ -18,6 +18,6 @@ export async function POST(req) {
     let parsedData=JSON.stringify(newData);
     const result= await writeDatabase(parsedData)
 // 
-    return Response.json({ shortUrl:`${process.env.NEXT_PUBLIC_HOST}${body.shortUrl}`,success: true, message: "Short URL Generated Sucessfully" })
+    return Response.json({ shortUrl:`${process.env.NEXT_PUBLIC_HOST}/${body.shortUrl}`,success: true, message: "Short URL Generated Sucessfully" })
 }
 

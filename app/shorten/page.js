@@ -20,7 +20,7 @@ const Shorten = () => {
              "shortUrl":ShortUrl
            });
            
-           let response = await fetch(`${process.env.NEXT_PUBLIC_HOST}api/generate`, { 
+           let response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/generate`, { 
              method: "POST",
              body: bodyContent,
              headers: headersList

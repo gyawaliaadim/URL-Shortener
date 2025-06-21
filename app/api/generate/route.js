@@ -1,23 +1,24 @@
-import {readDatabase, writeDatabase} from "@/lib/database.js"
+import clientPromise from "@/lib/mongodb";
 
 export async function POST(req) {
     const body = await req.json();
-    let d=await readDatabase();
-    const data=[...d]
-    let doc=data.filter((item)=>item.shortUrl==body.shortUrl)
+    const client = await clientPromise;
+    const db = client.db("links")
+    const collection = db.collection("url")
     // console.log(`data is ${data} and doc is ${doc}`)
-    console.log(doc)
-    if (doc.length > 0) {
-        return Response.json({ success: false, message: "Short URL Already Taken" })
+    console.log(body.shortUrl)
+    const doc = await collection.findOne({shortUrl: body.shortUrl})
+    if(doc){
+        return Response.json({success: false, error: true,  message: 'URL already exists!' })
     }
 
-    const newData = [...data,{
+
+    const result = await collection.insertOne({
         url: body.url,
         shortUrl: body.shortUrl
-    }]
-    let parsedData=JSON.stringify(newData);
-    const result= await writeDatabase(parsedData)
-//  
+    })
+
+  
     return Response.json({ shortUrl:`${process.env.NEXT_PUBLIC_HOST}/${body.shortUrl}`,success: true, message: "Short URL Generated Sucessfully" })
 }
 

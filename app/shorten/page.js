@@ -62,7 +62,9 @@ const Shorten = () => {
                         Generate.success ? 
 
 
-                        (<div className='flex justify-center items-center h-full w-full flex-col'><p className='font-bold text-2xl'>Your Short URL:</p><Link target="_blank" className="text-yellow-400" href={Generate.shortUrl}>{Generate.shortUrl} </Link></div>)
+                        (<div className='flex justify-center items-center h-full w-full flex-col'>
+                            <p className='font-bold text-2xl'>Your Short URL:</p>
+                        <Link target="_blank" className="text-yellow-400" href={Generate.shortUrl}>{Generate.shortUrl} </Link></div>)
                             :
                         (<div>
                             {Generate.message}
